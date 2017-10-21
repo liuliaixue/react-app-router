@@ -7,6 +7,10 @@ import About from './modules/About'
 import Repos from './modules/Repos'
 import Repo  from './modules/Repo'
 import Home  from './modules/Home'
+import Game  from './modules/Game/game'
+
+import GameTitle  from './modules/Game/route-title'
+
 
 // render(<App/>, document.getElementById('app'))
 render((
@@ -14,6 +18,8 @@ render((
     <Route path="/" component={App} >
       <IndexRoute component={Home}/>
       
+      <Route path="/game" component={Game} />
+      <Route path="/gameTitle" component={GameTitle} />
       <Route path="/about" component={About} />
       <Route path="/repos" component={Repos} >
         <Route path="/repos/:userName/:repoName" component={Repo} />
