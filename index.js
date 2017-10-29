@@ -11,7 +11,6 @@ import Game  from './modules/Game/game'
 
 import GameTitle  from './modules/Game/route-title'
 
-
 // render(<App/>, document.getElementById('app'))
 render((
   <Router history={browserHistory}>

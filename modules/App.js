@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import NavLink from './NavLink'
 import Home from './Home'
+import logo from './logo.svg'
 
 export default React.createClass({
   render() {

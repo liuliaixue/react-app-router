@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import './index.css';
+import './game.css';
 
 const calculateWinner = (squares) => {
   const lines = [
