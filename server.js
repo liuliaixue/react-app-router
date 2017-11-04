@@ -14,7 +14,17 @@ app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
+
+
+// socket.io
+var http = require('http').Server(app);
+var io = require('socket.io')(http)
+io.on('connection', () => {
+  console.log('a user connnected')
+})
+
+
 var PORT = process.env.PORT || 8080
-app.listen(PORT, function () {
+http.listen(PORT, function () {
   console.log('Production Express server running at localhost:' + PORT)
 })
