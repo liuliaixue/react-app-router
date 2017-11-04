@@ -1,25 +1,12 @@
 {
     "extends": "airbnb",
-    "installedESLint": true,
     "plugins": [
+      "react",
+      "jsx-a11y",
+      "import"
     ],
-    "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ],
-        "no-console": 0
+    "rules":{
+      "import/no-unresolved": 0,
+      "no-console": 0
     }
 }
