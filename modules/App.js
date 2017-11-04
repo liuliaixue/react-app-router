@@ -14,7 +14,7 @@ export default React.createClass({
           
           <li><NavLink to="/game" >Game</NavLink></li>
           
-          <li><NavLink to="/gameTitle" >Game title</NavLink></li>
+          <li><NavLink to="/talk" >talk</NavLink></li>
           <li><NavLink to="/about" >About</NavLink></li>
           <li><NavLink to="/repos" >Repos</NavLink></li>
         </ul>

@@ -18,3 +18,11 @@ var PORT = process.env.PORT || 8080
 app.listen(PORT, function () {
   console.log('Production Express server running at localhost:' + PORT)
 })
+
+
+// socket.io
+// var http = require('http').Server(app);
+// var io = require('socket.io')(http)
+// io.on('connection', () => {
+//   console.log('a user connnected')
+// })
