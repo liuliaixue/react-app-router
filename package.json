@@ -32,7 +32,11 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-standard": "^3.0.1",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
     "http-server": "^0.8.5",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"
   }
