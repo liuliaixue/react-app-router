@@ -9,11 +9,16 @@ module.exports = {
     publicPath: '/'
   },
 
+  devServer: {
+    host: '127.0.0.1',
+    port: 60000
+  },
+
   module: {
     loaders: [
       {
         test: /\.js$/,
-        exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react'
+        exclude: /node_modules/, loader: 'babel-loader'
       },
       {
         test: /\.css$/,

@@ -11,10 +11,12 @@ export default React.createClass({
         <h1>React Router Tutorial</h1>
         <ul role="nav">
           <li><NavLink to="/" onlyActiveOnIndex={true}>Home</NavLink></li>
-          
+
           <li><NavLink to="/game" >Game</NavLink></li>
-          
+
           <li><NavLink to="/gameTitle" >Game title</NavLink></li>
+
+          <li><NavLink to="/mention" >mention</NavLink></li>
           <li><NavLink to="/about" >About</NavLink></li>
           <li><NavLink to="/repos" >Repos</NavLink></li>
         </ul>
