@@ -18,8 +18,8 @@ import GameTitle from './modules/Game/route-title'
 // render(<App/>, document.getElementById('app'))
 render((
   <Router history={browserHistory}>
-    <Route path="/"  component={App}>
-      <IndexRoute component={Home} />
+    <Route path="/"  >
+      <IndexRoute component={App} />
 
       <Route path="/game" component={Game} />
       <Route path="/gameTitle" component={GameTitle} />
