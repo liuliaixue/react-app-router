@@ -10,6 +10,8 @@ import Home from './modules/Home'
 import Game from './modules/Game/game'
 
 import Mention from './modules/Mention'
+import Learn from './Learn'
+import Lesson from './Learn/Lesson'
 
 
 
@@ -28,6 +30,9 @@ render((
       <Route path="/repos" component={Repos} >
         <Route path="/repos/:userName/:repoName" component={Repo} />
       </Route>
+      <Route path="/learn" component={Learn}> 
+        <Route path="/learn/:lesson" component={Lesson} />
+      </Route> 
     </Route>
   </Router>
 ), document.getElementById('app'))

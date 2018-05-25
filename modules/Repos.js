@@ -1,6 +1,6 @@
 // modules/Repos.js
 import React from 'react'
-import NavLink from './NavLink'
+import NavLink from '../component/NavLink'
 // import { Link } from 'react-router'
 
 export default React.createClass({

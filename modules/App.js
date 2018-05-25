@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import NavLink from './NavLink'
+import NavLink from '../component/NavLink'
 import Home from './Home'
 import logo from './logo.svg'
 
@@ -19,6 +19,8 @@ export default React.createClass({
           <li><NavLink to="/mention" >mention</NavLink></li>
           <li><NavLink to="/about" >About</NavLink></li>
           <li><NavLink to="/repos" >Repos</NavLink></li>
+
+          <li><NavLink to="/learn" >learn</NavLink></li>
         </ul>
         {this.props.children || <Home />}
       </div>

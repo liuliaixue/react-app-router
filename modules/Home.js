@@ -3,6 +3,6 @@ import React from 'react'
 
 export default React.createClass({
   render() {
-    return <div > home</div>
+    return <div > this is home page</div>
   }
 })
