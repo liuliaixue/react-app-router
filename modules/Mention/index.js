@@ -5,9 +5,10 @@ export default class Mentions extends React.Component {
 
     render() {
         return (<div>
-            {[1, 2, 3].map(() => {
+            {/* {[1, 2, 3].map(() => {
                 return <Mention />
-            })}
+            })} */}
+            <Mention />
         </div>)
     }
 }

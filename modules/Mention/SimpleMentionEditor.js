@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { EditorState } from 'draft-js';
+import { EditorState, CompositeDecorator } from 'draft-js';
 import Editor from 'draft-js-plugins-editor';
 import createMentionPlugin, { defaultSuggestionsFilter } from 'draft-js-mention-plugin';
 import './editorStyles.css';
@@ -43,8 +43,41 @@ export default class SimpleMentionEditor extends Component {
         }
     }
 
+    getD() {
+        const HandleSpan = (props) => {
+            return <span {...props} style={styles.handle}>{props.children}</span>;
+        };
+
+        const HANDLE_REGEX = /\@[\w]+/g;
+
+        function handleStrategy(contentBlock, callback, contentState) {
+            findWithRegex(HANDLE_REGEX, contentBlock, callback);
+        }
+
+        function hashtagStrategy(contentBlock, callback, contentState) {
+            findWithRegex(HASHTAG_REGEX, contentBlock, callback);
+        }
+
+        function findWithRegex(regex, contentBlock, callback) {
+            const text = contentBlock.getText();
+            let matchArr, start;
+            while ((matchArr = regex.exec(text)) !== null) {
+                start = matchArr.index;
+                callback(start, start + matchArr[0].length);
+            }
+        }
+
+        const compositeDecorator = new CompositeDecorator([
+            {
+                strategy: handleStrategy,
+                component: HandleSpan,
+            },
+        ]);
+        return compositeDecorator
+    }
 
     render() {
+        console.log('@')
         const { MentionSuggestions } = this.mentionPlugin;
         const plugins = [this.mentionPlugin];
         return (
@@ -54,6 +87,8 @@ export default class SimpleMentionEditor extends Component {
                         editorState={this.state.editorState}
                         onChange={this.onChange}
                         plugins={plugins}
+                        // decorators={[this.getD()]}
+                        mentionPrefix="@"
                         ref={(element) => { this.editor = element; }}
                     />
                     <MentionSuggestions

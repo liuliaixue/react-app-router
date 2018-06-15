@@ -1,11 +1,12 @@
 const mentions = [
     {
-        name: 'Matthew Russell',
+        name: '@ Matthew Russell',
+        display: 'Ma',
         link: 'https://twitter.com/mrussell247',
         avatar: 'https://pbs.twimg.com/profile_images/517863945/mattsailing_400x400.jpg',
     },
     {
-        name: 'Julian Krispel-Samsel',
+        name: '@ Julian Krispel-Samsel',
         link: 'https://twitter.com/juliandoesstuff',
         avatar: 'https://avatars2.githubusercontent.com/u/1188186?v=3&s=400',
     },
